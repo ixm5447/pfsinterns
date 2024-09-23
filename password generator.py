@@ -52,7 +52,7 @@ while True:
         pwd = generate_password(min_length, has_number, has_special)
         print("The generated password is: " + pwd)
 
-        copy_clipboard = input("Would you like to copy this password to your clipboard (Y/N)? ") == "y" #returns true if yes
+        copy_clipboard = input("Would you like to copy this password to your clipboard (Y/N)? ").lower() == "y" #returns true if yes
         if copy_clipboard:
             pyperclip.copy(pwd)
             print("The password has been saved to your clipboard successfully!")
